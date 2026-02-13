@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  /* Color Palette - Obsidian Minimalist */
+  --bg-main: #000000;
+  /* Pitch Black */
+  --bg-panel: #121212;
+  /* Very Dark Grey */
+  --bg-hover: #27272a;
+  /* Zinc 800 */
+
+  --border-subtle: #27272a;
+  /* Zinc 800 */
+  --border-active: #3f3f46;
+  /* Zinc 700 */
+
+  --text-primary: #fafafa;
+  /* Zinc 50 */
+  --text-secondary: #a1a1aa;
+  /* Zinc 400 */
+  --text-tertiary: #52525b;
+  /* Zinc 600 */
+
+  /* Accents - Professional Indigo */
+  --accent-primary: #6366f1;
+  /* Indigo 500 */
+  --accent-hover: #4f46e5;
+  /* Indigo 600 */
+  --accent-subtle: rgba(99, 102, 241, 0.1);
+
+  /* Radius & Spacing */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Typography Utilities */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+}
+
+/* Card Utility - Replaces Glass Panel */
+.card {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--border-active);
+}
+
+/* Input Utility */
+.input-base {
+  background-color: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 0.75rem;
+  color: var(--text-primary);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-base:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 2px var(--accent-subtle);
+}
+
+/* Button Utility */
+.btn-primary {
+  background-color: var(--accent-primary);
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 5px;
+  border: 2px solid var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-active);
+}
